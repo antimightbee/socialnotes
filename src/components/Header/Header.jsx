@@ -1,9 +1,12 @@
 import React from 'react'
 import './Header.scss'
+import Menu from './Menu/Menu'
 
 const Header = () => {
   return (
-    <div>Header</div>
+    <header className="Header">
+      <Menu/>
+    </header>
   )
 }
 
