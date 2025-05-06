@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
 import './Menu.scss'
 import { staticData } from '../../../staticData'
-import { useNavigate } from 'react-router-dom'
-
+import { NavLink } from 'react-router-dom'
+import Icon from '../../Icon/Icon'
 const Menu = () => {
   const [active, setActive] = useState(false)
-  const navigate = useNavigate()
 
   const activeHandler = () => {
     setActive(!active)
@@ -31,15 +30,14 @@ const Menu = () => {
             {staticData.menuOptions.map((item, index) => {
               return (
                 <div
-                  className="Menu-active-item"
+                  className="Menu-active-inner-item"
                   key={item.id || index}
                   onClick={() => {
-                    navigate(item.link)
                     setActive(false)
                   }}
                 >
-                  <div className="Menu-active-item-icon">{item.icon}</div>
-                  <div className="Menu-active-item-title">{item.title}</div>
+                  <div className="Menu-active-item-icon"><Icon icon={item.icon}/></div>
+                  <NavLink to={item.link}><div className="Menu-active-item-title">{item.title}</div></NavLink>
                 </div>
               )
             })}

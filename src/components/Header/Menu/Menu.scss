@@ -30,12 +30,13 @@
             flex-direction: column;
             gap: 20px;
             background-color: var(--main-color);
-        }
-        &-item{
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 7.5px;
+            &-item{
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                gap: 7.5px; 
+    
+            }
         }
     }
 }

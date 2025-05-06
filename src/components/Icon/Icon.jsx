@@ -1,12 +1,20 @@
 import React, { useEffect, useState } from 'react';
-
-import { Add,Cake,Delete,Edit, ExitToApp,MailOutline,PriorityHigh,SettingsOutlined,Visibility, VisibilityOff} from '@mui/icons-material';
+import { Add,Cake,Delete,Diversity3,Edit, ExitToApp,Home,MailOutline,Person,PriorityHigh,SettingsOutlined,Visibility, VisibilityOff} from '@mui/icons-material';
 const Icon = ({ icon, onClick, fontSize='normal' }) => {
     const [state, setState] = useState(null);
 
     useEffect(() => {
         let ico = null;
         switch (icon) {
+            case "home":
+                ico = <Home onClick={onClick} />
+                break;
+            case "friends":
+                ico = <Diversity3  onClick={onClick} />
+                break;
+            case "profile":
+                ico = <Person  onClick={onClick} />
+                break;
             case "warning":
                 ico = <PriorityHigh  onClick={onClick} />
                 break;
@@ -29,7 +37,7 @@ const Icon = ({ icon, onClick, fontSize='normal' }) => {
                 ico = <Delete style={{ cursor: "pointer" }}  onClick={onClick} />;
                 break;
             case "add":
-                ico = <Add  style={{ cursor: "pointer" }} fontSize='large' onClick={onClick} />;
+                ico = <Add  style={{ cursor: "pointer" }} onClick={onClick} />;
                 break;
             case "edit":
                 ico = <Edit style={{ cursor: "pointer" }}  onClick={onClick} />;

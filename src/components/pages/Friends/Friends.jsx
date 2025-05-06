@@ -1,9 +1,11 @@
 import React, { act, useEffect, useState } from 'react'
 import './Friends.scss'
+import { NavLink } from "react-router";
+
 import Tooltip from '@mui/material/Tooltip';
 import { Button } from '@mui/material';
 const Friends = () => {
-  const cardsPerCount = 4
+  const cardsPerCount = 6
   const testData = [
     {
       id: 1,
@@ -115,7 +117,7 @@ const Friends = () => {
           </div>
         </div>
         <div className="Friends-card-second-row">
-          <div className="Friends-card-second-row-name">{item.name}</div>
+          <div className="Friends-card-second-row-name"><NavLink to={`/profile/${item.id}`}>{item.name}</NavLink></div>
           <Tooltip title={item.status}>
           <div className="Friends-card-second-row-status" style={{backgroundColor: `${getStatusColor(item.status)}`}}></div>
           </Tooltip>
