@@ -4,87 +4,10 @@ import { NavLink } from "react-router";
 
 import Tooltip from '@mui/material/Tooltip';
 import { Button } from '@mui/material';
+import { staticData } from '../../../staticData';
 const Friends = () => {
   const cardsPerCount = 6
-  const testData = [
-    {
-      id: 1,
-      name: 'John Doe',
-      status: 'online',
-      imgUrl: 'https://example.com/johndoe.jpg',
-      description: 'John is a software engineer who loves hiking and playing chess.',
-    },
-    {
-      id: 2,
-      name: 'Jane Smith',
-      status: 'offline',
-      imgUrl: 'https://example.com/janesmith.jpg',
-      description: 'Jane is a graphic designer with a passion for photography and art.',
-    },
-    {
-      id: 3,
-      name: 'Alice Johnson',
-      status: 'online',
-      imgUrl: 'https://example.com/alicejohnson.jpg',
-      description: 'Alice enjoys baking cakes and volunteering at local shelters.',
-    },
-    {
-      id: 4,
-      name: 'Bob Brown',
-      status: 'offline',
-      imgUrl: 'https://example.com/bobbrown.jpg',
-      description: 'Bob is a freelance writer who often travels to find inspiration.',
-    },
-    {
-      id: 5,
-      name: 'Charlie Davis',
-      status: 'online',
-      imgUrl: 'https://example.com/charliedavis.jpg',
-      description: 'Charlie is a student studying biology and playing the guitar.',
-    },
-    {
-      id: 6,
-      name: 'Diana Evans',
-      status: 'online',
-      imgUrl: 'https://example.com/dianaevans.jpg',
-      description: 'Diana loves painting landscapes and reading mystery novels.',
-    },
-    {
-      id: 7,
-      name: 'Ethan Harris',
-      status: 'offline',
-      imgUrl: 'https://example.com/ethanharris.jpg',
-      description: 'Ethan works in marketing and enjoys cycling on weekends.',
-    },
-    {
-      id: 8,
-      name: 'Fiona Green',
-      status: 'online',
-      imgUrl: 'https://example.com/fionagreen.jpg',
-      description: 'Fiona is a yoga instructor who travels the world teaching classes.',
-    },
-    {
-      id: 9,
-      name: 'George Lee',
-      status: 'offline',
-      imgUrl: 'https://example.com/georgelee.jpg',
-      description: 'George plays the piano and writes his own music compositions.',
-    },
-    {
-      id: 10,
-      name: 'Hannah Miller',
-      status: 'online',
-      imgUrl: 'https://example.com/hannahmiller.jpg',
-      description: 'Hannah is a fashion blogger and coffee enthusiast.',
-    },
-    {
-      id: 11,
-      name: 'Ian Thompson',
-      status: 'offline',
-      imgUrl: 'https://example.com/ianthompson.jpg',
-      description: 'Ian enjoys coding mobile apps and exploring virtual reality tech.',
-    },
-  ];
+  const testData = staticData.profiles
   
 
   const Card = ({item})=>{
@@ -124,7 +47,7 @@ const Friends = () => {
         </div>
 
         <div className="Friends-card-description">
-          {cutDescription(item.description)}
+          {cutDescription(item.about)}
         </div>
       </div>
     )
