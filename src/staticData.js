@@ -1,40 +1,110 @@
 
 
 export const staticData = {
-    menuOptions:[{
-        title:"Home",
-        icon:"home",
-        link:""
-    },{
-        title:"Create note",
-        icon:"add",
-        link:"/create-post"
-    },{
-        title:"Friends",
-        icon:"friends",
-        link:"/friends"
-    },{
-        title:"Profile",
-        icon:"profile",
-        link:"/profile/1"
-    },
-],
-profiles:[
+  menuOptions: [{
+    title: "Home",
+    icon: "home",
+    link: ""
+  }, {
+    title: "Create note",
+    icon: "add",
+    link: "/create-post"
+  }, {
+    title: "Friends",
+    icon: "friends",
+    link: "/friends"
+  }, {
+    title: "Profile",
+    icon: "profile",
+    link: "/profile/1"
+  },
+  ],
+  profiles: [
     {
       id: 1,
       name: 'John Doe',
-      nickname:'johndoe123',
+      nickname: 'johndoe123',
       status: 'online',
       imgUrl: 'https://inweb.ua/blog/wp-content/uploads/2024/05/hamster-kombat-mozhe-buti-1120x588.jpg',
       about: 'John is a software engineer who loves hiking and playing chess.',
-      networks:[{
-        name:"instagram",
-        link:"http://instagram.com/teenagelightning2007"
+      networks: [{
+        name: "instagram",
+        link: "http://instagram.com/teenagelightning2007"
       },
       {
-        name:"spotify",
-        link:"https://open.spotify.com/user/5o70xq5l7flj02f1gowukvwte"
+        name: "spotify",
+        link: "https://open.spotify.com/user/5o70xq5l7flj02f1gowukvwte"
       }],
+      notes: [{
+        id: 1,
+        description: "hiiiii this is my note!!",
+        song: {
+          name:"name",
+          artist:"artist"
+        },
+        date: "2024-05-01",
+        media: [{
+          type: "image",
+          link: ""
+        }, {
+          type: "image",
+          link: ""
+        },]
+      },{
+        id: 1,
+        description: "woah",
+        song: {
+          name:"threnody for the victims of hiroshima",
+          artist:"krzysztof penderecki"
+        },
+        date: "2024-05-03",
+        media: []
+      },{
+        id: 1,
+        description: "woah",
+        song: {
+          name:"threnody for the victims of hiroshima",
+          artist:"krzysztof penderecki"
+        },
+        date: "2024-05-03",
+        media: []
+      },{
+        id: 1,
+        description: "woah",
+        song: {
+          name:"threnody for the victims of hiroshima",
+          artist:"krzysztof penderecki"
+        },
+        date: "2024-05-03",
+        media: []
+      },{
+        id: 1,
+        description: "woah",
+        song: {
+          name:"threnody for the victims of hiroshima",
+          artist:"krzysztof penderecki"
+        },
+        date: "2024-05-03",
+        media: []
+      },{
+        id: 1,
+        description: "woah",
+        song: {
+          name:"threnody for the victims of hiroshima",
+          artist:"krzysztof penderecki"
+        },
+        date: "2024-05-03",
+        media: []
+      },{
+        id: 1,
+        description: "woah",
+        song: {
+          name:"threnody for the victims of hiroshima",
+          artist:"krzysztof penderecki"
+        },
+        date: "2024-05-03",
+        media: []
+      },]
     },
     {
       id: 2,
@@ -108,17 +178,17 @@ profiles:[
     },
   ],
 
-networksData:{
-  instagram:{
-    name:"Instagram",
-    icon:"instagram",
-    link:"https://i.pinimg.com/474x/1e/d6/e0/1ed6e0a9e69176a5fdb7e090a1046b86.jpg"
-  },
-  spotify:{
-    name:"Spotify",
-    icon:"spotify",
-    link:"https://commons.wikimedia.org/wiki/File:Spotify_icon.svg"
-  },
+  networksData: {
+    instagram: {
+      name: "Instagram",
+      icon: "instagram",
+      link: "https://i.pinimg.com/474x/1e/d6/e0/1ed6e0a9e69176a5fdb7e090a1046b86.jpg"
+    },
+    spotify: {
+      name: "Spotify",
+      icon: "spotify",
+      link: "https://commons.wikimedia.org/wiki/File:Spotify_icon.svg"
+    },
 
-}
+  }
 }

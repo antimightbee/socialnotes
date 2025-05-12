@@ -2,6 +2,7 @@ import React from 'react'
 import './Profile.scss'
 import { staticData } from '../../../staticData.js'
 import { Tooltip } from '@mui/material'
+import NoteCard from '../../elements/NoteCard/NoteCard.jsx'
 const Profile = () => {
   const userId = window.location.pathname.split('/')[2]
   const userData = staticData.profiles[userId - 1]
@@ -43,7 +44,13 @@ const Profile = () => {
               </div>
             </div>
           </div>
-          <div className="Profile-card-top-notes"></div>
+          <div className="Profile-card-top-notes">
+            {userData.notes && userData.notes.map((item,index)=>{
+              return (
+                <NoteCard key={index} data={item}/>
+              )
+            })}
+          </div>
         </div>
 
         <div className="Profile-card-bottom">

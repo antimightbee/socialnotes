@@ -1,0 +1,30 @@
+.NoteCard{
+    min-width: 150px;
+    height: 200px;
+    background-color: lightsalmon;
+    border-radius: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    &-song{
+        width: 50px;
+        height:50px;
+        border-radius: 100%;
+        background-color: lightblue;
+        cursor: pointer;
+    }
+    &-name{
+        font-weight: 600;
+        text-align: center;
+        cursor: pointer;
+    }
+    &-artist{
+        font-style: italic;
+        text-align: center;
+        cursor: pointer;
+    }
+}

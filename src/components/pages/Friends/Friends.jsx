@@ -5,6 +5,7 @@ import { NavLink } from "react-router";
 import Tooltip from '@mui/material/Tooltip';
 import { Button } from '@mui/material';
 import { staticData } from '../../../staticData';
+import cutText from '../../../functions/cutText';
 const Friends = () => {
   const cardsPerCount = 6
   const testData = staticData.profiles
@@ -23,13 +24,7 @@ const Friends = () => {
       }
     }
 
-    const cutDescription = (desc)=>{
-      if(desc.length>50){
-        return desc.slice(0,50)+'...'
-      }else{
-        return desc
-      }
-    }
+
 
     return(
       <div className="Friends-card">
@@ -47,7 +42,7 @@ const Friends = () => {
         </div>
 
         <div className="Friends-card-description">
-          {cutDescription(item.about)}
+          {cutText(item.about, 50)}
         </div>
       </div>
     )
